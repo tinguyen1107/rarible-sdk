@@ -77,7 +77,7 @@ function createRaribleConfig(environment: RaribleSdkEnvironment): IRaribleSdkCon
     logs: LogsLevel.TRACE,
     blockchain: {
       [WalletType.ETHEREUM]: {
-        marketplaceMarker: "0x12345678900000000000000000000000000123456789face",
+        marketplaceMarker: "0x9B670d57EcFb1f719c9722397d96D8fe57dAc794",
       },
       [WalletType.SOLANA]: {
         eclipseMarketplaces: ["Rari4ReeeT8bhbsRGP5J8RBhTFXTAP7iMm7VHuNQTs5"],

@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form"
 import { Box, Stack } from "@mui/material"
 import type { PrepareOrderResponse } from "@rarible/sdk/build/types/order/common"
 import { MaxFeesBasePointSupport } from "@rarible/sdk/build/types/order/fill/domain"
-import { toBigNumber } from "@rarible/types"
+import { toBigNumber, toUnionAddress } from "@rarible/types"
 import { generateExpirationDate } from "@rarible/sdk/build/common/suite/order"
 import { FormTextInput } from "../../components/common/form/form-text-input"
 import { FormSubmit } from "../../components/common/form/form-submit"
@@ -48,7 +48,22 @@ export function SellForm({ prepare, disabled, onComplete }: ISellFormProps) {
                 amount: parseInt(formData.amount),
                 currency: getCurrency(currency.blockchain, currency.type, currency.contract ?? formData.contract),
                 maxFeesBasePoint,
-                originFees: [],
+                payouts: [
+                  {
+                    account: toUnionAddress("ETHEREUM:0x39Befa60e7991f22F6917A8eC81C90f34Ef606D1"),
+                    value: 6000,
+                  },
+                  {
+                    account: toUnionAddress("ETHEREUM:0xf72A95B74220575d281F561ab7E51d4188230db3"),
+                    value: 4000,
+                  },
+                ],
+                originFees: [
+                  {
+                    account: toUnionAddress("ETHEREUM:0x37db951038AE8fd3b2110CACC81C500E7c9bf083"),
+                    value: 1234,
+                  },
+                ],
                 expirationDate: generateExpirationDate(),
               }),
             )

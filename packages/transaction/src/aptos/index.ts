@@ -1,8 +1,6 @@
 import { Network, TransactionResponseType } from "@aptos-labs/ts-sdk"
 import type { TransactionResponse } from "@aptos-labs/ts-sdk"
 import { Blockchain } from "@rarible/api-client"
-import type { SupportedNetwork } from "@rarible/aptos-sdk"
-import type { AptosSdk } from "@rarible/aptos-sdk"
 import type { IBlockchainTransaction } from "../domain"
 
 export class BlockchainAptosTransaction implements IBlockchainTransaction {
@@ -10,9 +8,9 @@ export class BlockchainAptosTransaction implements IBlockchainTransaction {
 
   constructor(
     readonly transaction: TransactionResponse,
-    readonly network: SupportedNetwork,
-    readonly sdk: AptosSdk,
-  ) {}
+    readonly network: any,
+    readonly sdk: any,
+  ) { }
 
   hash = () => this.transaction.hash
 

@@ -12,6 +12,7 @@ import { MintPage } from "./pages/mint/mint-page"
 import { BidPage } from "./pages/bid/bid-page"
 import { AcceptBidPage } from "./pages/accept-bid/acceptbid-page"
 import { ItemsPage } from "./pages/items/items-page"
+import { OrdersPage } from "./pages/orders/orders-page"
 import { UploadMetaPage } from "./pages/upload-meta/upload-meta-page"
 import { BurnPage } from "./pages/burn/burn-page"
 import { TransferPage } from "./pages/transfer/transfer-page"
@@ -77,6 +78,7 @@ export function App() {
                     <Route path=":itemId" element={<BurnPage />} />
                   </Route>
                   <Route path="items" element={<ItemsPage />} />
+                  <Route path="orders" element={<OrdersPage />} />
                   <Route path="sign" element={<SignPage />} />
                   <Route path="utils" element={<UtilsPage />} />
                   <Route path="*" element={<NotFoundPage />} />

@@ -65,6 +65,6 @@ const state = {
 
 const apiKeyDictionary: Record<RaribleSdkEnvironment, string | undefined> = {
   prod: process.env.REACT_APP_PROD_API_KEY || "93a18094-66f0-4a15-94f5-e88a27a81315",
-  development: process.env.REACT_APP_TESTNETS_API_KEY || "d9c4c54c-e423-4063-bb11-dfcc6ecba3e7",
-  testnet: process.env.REACT_APP_TESTNETS_API_KEY || "d9c4c54c-e423-4063-bb11-dfcc6ecba3e7",
+  development: process.env.REACT_APP_TESTNETS_API_KEY || "c04dedab-16f5-41b1-b016-69093b1620ce",
+  testnet: process.env.REACT_APP_TESTNETS_API_KEY || "c04dedab-16f5-41b1-b016-69093b1620ce",
 }

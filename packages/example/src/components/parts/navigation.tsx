@@ -73,6 +73,10 @@ export function Navigation() {
       path: "/items",
     },
     {
+      label: "My Orders",
+      path: "/orders",
+    },
+    {
       label: "Utils",
       path: "/utils",
     },

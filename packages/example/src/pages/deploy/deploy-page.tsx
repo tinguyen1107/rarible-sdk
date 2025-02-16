@@ -94,7 +94,11 @@ export function DeployPage() {
               }
               console.log("connection", connection, getDeployRequest(formData), formData)
 
-              setComplete(await connection.sdk.nft.createCollection(getDeployRequest(formData)))
+              setComplete(
+                await connection.sdk.nft.createCollection({
+                  ...getDeployRequest(formData),
+                }),
+              )
             } catch (e) {
               setError(e)
             }
